@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+
+    <!-- Icons from FontAwesome -->
+    <script src="https://kit.fontawesome.com/0382593e0e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <section id="name">
+            <header>
+                <h1>Gil Cernich Manuel</h1>
+            </header>
+            <p class="carreer">Computer Engineering Student.</p>
+            <p class="city">
+                Córdoba, Córdoba, Argentina.
+            </p>
+            <!-- Contact Information with Links -->
+            <div class="contact-links">
+                <a href="https://github.com/manugcr/" target="_blank">
+                    <i class="fab fa-github fa-2x" aria-hidden="true"></i> <!-- GitHub icon -->
+                </a>
+                <a href="https://www.linkedin.com/in/manuel-gil-cernich-520b442b5/" target="_blank">
+                    <i class="fab fa-linkedin fa-2x" aria-hidden="true"></i> <!-- LinkedIn icon -->
+                </a>
+                <a href="mailto:mgilcernich@gmail.com">
+                    <i class="far fa-envelope fa-2x" aria-hidden="true"></i> <!-- Email icon -->
+                </a>
+            </div>
+        </section>
+
+        <section id="about-me">
+            <h2>About me</h2>
+            <p>I am a dedicated student with a passion for low-level programming, reverse engineering, and the
+                development of embedded systems. My expertise extends to microcontrollers and C applications, where I
+                enjoy delving into the intricacies of system architecture and operation.</p>
+            <p> Beyond software, I am deeply involved in electronics, particularly in designing and implementing
+                projects using microcontrollers. This includes exploring their capabilities in connectivity, IoT
+                applications, and real-time data processing.</p>
+        </section>
+
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-entry">
+                <h3>Universidad Nacional de Córdoba</h3>
+                <p>Computer Engineering | <span class="education-dates">2019 - Present</span></p>
+            </div>
+        </section>
+
+        <section id="languages">
+            <h2>Languages</h2>
+            <div class="language-entry">
+                <p class="language-description"><span class="language-name">Spanish</span> | <span
+                        class="language-level">Native</span></p>
+            </div>
+            <div class="language-entry">
+                <p class="language-description"><span class="language-name">English</span> | <span
+                        class="language-level">Advanced (B2)</span></p>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+
+            <div class="skill-category">
+                <div class="skill">
+                    <p>C/C++</p>
+                    <p>Java</p>
+                    <p>Python</p>
+                    <p>x86 Assembly</p>
+                    <p>SQL</p>
+                    <p>Docker</p>
+                    <p>Git/Github</p>
+                    <p>QA</p>
+                    <p>Arduino</p>
+                    <p>ESP32</p>
+                    <p>Raspberry Pi</p>
+                    <p>Linux</p>
+                    <p>Windows</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="projects-container">
+                <a href="https://github.com/manugcr/Compiladores" class="project-card" target="_blank">
+                    <i class="fas fa-code project-icon" aria-hidden="true"></i> <!-- Icon for the project -->
+                    <h3>Basic C Compiler</h3>
+                    <p class="project-subtitle">Creation of a basic C compiler using Java and ANTLR. Implementing
+                        functionalities for lexical, syntactic and grammatical analysis and intermediate code generation
+                    </p>
+                    <div class="project-technologies">
+                        <p>ANTLR</p>
+                        <p>JAVA</p>
+                    </div>
+                </a>
+                <a href="https://github.com/manugcr/EDIII_C" class="project-card" target="_blank">
+                    <i class="fas fa-code project-icon" aria-hidden="true"></i> <!-- Icon for the project -->
+                    <h3>Sound synthesizer</h3>
+                    <p class="project-subtitle">Design and implementation of a complete sound synthesizer on an LPC1769
+                        microcontroller. Audio capture through a microphone, real-time audio manipulation and playback
+                        through a speaker.</p>
+                    <div class="project-technologies">
+                        <p>C</p>
+                        <p>LPC1769</p>
+                        <p>ARM</p>
+                    </div>
+                </a>
+                <a href="https://github.com/manugcr/labs_soi/tree/main/soi-2023-lab1-rdproc-manugcr"
+                    class="project-card" target="_blank">
+                    <i class="fas fa-code project-icon" aria-hidden="true"></i> <!-- Icon for the project -->
+                    <h3>rdproc</h3>
+                    <p class="project-subtitle">Neofetch style application that retrieves the information about the
+                        current computer, gathered from /proc dir and printed on linux terminal.</p>
+                    <div class="project-technologies">
+                        <p>C</p>
+                        <p>Linux</p>
+                    </div>
+                </a>
+
+                <a href="https://github.com/ICOMP-UNC/h-p-cpp-hope-programming-cpp-manugcr" class="project-card"
+                    target="_blank">
+                    <i class="fas fa-code project-icon" aria-hidden="true"></i> <!-- Icon for the project -->
+                    <h3>Client-Server with OpenMP</h3>
+                    <p class="project-subtitle">Development of a multi-client server application using C++
+                        sockets and multiprocessing techniques. With functionalities as a database and canny edge image
+                        processing.
+                    </p>
+                    <div class="project-technologies">
+                        <p>OpenMP</p>
+                        <p>C++</p>
+                        <p>RocksDB</p>
+                    </div>
+                </a>
+                <!-- Add more project cards as needed -->
+            </div>
+        </section>
+
+    </div>
+
+    <script>
+        const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+        document.addEventListener("DOMContentLoaded", () => {
+            animateSectionText("#name", 20);
+        });
+
+        function animateSectionText(sectionSelector, intervalDuration) {
+            const section = document.querySelector(sectionSelector);
+
+            if (!section) return;
+
+            // Select all elements within the section that contain text content
+            const elementsWithText = section.querySelectorAll('h1, p, .carreer, .city');
+
+            elementsWithText.forEach(element => {
+                animateElementText(element, intervalDuration);
+            });
+        }
+
+        function animateElementText(element, intervalDuration) {
+            const originalText = element.dataset.value || element.innerText;
+            let interval = null;
+            let iteration = 0;
+
+            interval = setInterval(() => {
+                // Only animate non-link text content
+                if (element.tagName !== 'A' && element.parentElement.tagName !== 'A') {
+                    element.innerText = originalText
+                        .split("")
+                        .map((letter, index) => {
+                            if (index < iteration) {
+                                return originalText[index];
+                            }
+                            return letters[Math.floor(Math.random() * letters.length)];
+                        })
+                        .join("");
+
+                    if (iteration >= originalText.length) {
+                        clearInterval(interval);
+                    }
+
+                    iteration += 1 / 3;
+                }
+            }, intervalDuration);
+        }
+    </script>
+
+</body>
+
+</html>
